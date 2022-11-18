@@ -39,7 +39,6 @@
         position: absolute;
         animation-name: move;
         animation-duration: 2s;
-        /* this page */
         /* reaches end and stops there */
         /* animation-fill-mode: forwards; */
         /* animation-fill-mode: backwards; */
@@ -47,6 +46,23 @@
         /* animation-delay: 2s; */
         /* animation-iteration-count: 3; */
         animation-iteration-count: infinite;
+      }
+      .scooter2 {
+        height: 50px;
+        width: 50px;
+        margin-top: 10%;
+        border: 1px solid red;
+        position: absolute;
+        animation-name: move;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        /* animation-iteration-count: 2; */
+        animation-fill-mode: forwards;
+        /* animation-iteration-count: 4; */
+        /* animation-direction: normal; */
+        /* animation-direction: reverse; */
+        /* animation-direction: alternate; */
+        animation-direction: alternate-reverse;
       }
       .lines {
         width: 100%;
@@ -60,10 +76,11 @@
       }
       @keyframes move {
         from {
-          translate: -60px 0;
+          translate: -50px 0;
         }
         to {
-          translate: calc(110vw) 0;
+          /* translate: calc(100vw - 50px) 0; */
+          translate: calc(100vw) 0;
         }
       }
     </style>
@@ -78,6 +95,12 @@
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm5tBR_YU2mswkWlZlGZntmSYd1HRbXwRLeA&usqp=CAU"
         alt="scooter"
       />
+      <img
+        class="scooter2"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm5tBR_YU2mswkWlZlGZntmSYd1HRbXwRLeA&usqp=CAU"
+        alt="scooter"
+      />
+
       <div class="lines"></div>
     </div>
   </body>
