@@ -38,13 +38,15 @@
         border: 1px solid;
         position: absolute;
         animation-name: move;
-        animation-duration: 5s;
+        animation-duration: 2s;
         /* this page */
         /* reaches end and stops there */
         /* animation-fill-mode: forwards; */
         /* animation-fill-mode: backwards; */
         animation-fill-mode: both;
-        animation-delay: 2s;
+        /* animation-delay: 2s; */
+        /* animation-iteration-count: 3; */
+        animation-iteration-count: infinite;
       }
       .lines {
         width: 100%;
@@ -58,10 +60,10 @@
       }
       @keyframes move {
         from {
-          translate: 0 0;
+          translate: -60px 0;
         }
         to {
-          translate: calc(100vw - 52px) 0;
+          translate: calc(110vw) 0;
         }
       }
     </style>
