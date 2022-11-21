@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Shopping cart</title>
+    <style>
+      body {
+        /* background: black; */
+      }
+      .navbar {
+        height: 100px;
+        border-bottom: 1px solid red;
+        display: flex;
+        align-items: center;
+        margin: 0 10px;
+      }
+      .logo-main {
+        height: 50px;
+        width: 140px;
+        background: rgba(138, 138, 138, 0.784);
+        padding: 5px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px 5px rgba(138, 138, 138, 0.784);
+      }
+
+      .ninja-cart {
+        height: 50px;
+        width: 50px;
+        position: absolute;
+        right: 20px;
+      }
+      img {
+        height: 100%;
+        width: 100%;
+      }
+      .item-collection {
+        margin-top: 24px;
+        display: flex;
+        gap: 12px;
+      }
+      .items {
+        width: fit-content;
+        text-align: center;
+        height: fit-content;
+      }
+      button {
+        margin-top: 18px;
+        width: 120px;
+        height: 30px;
+        border: 1px solid rgba(215, 214, 214, 0.792);
+        outline: none;
+        cursor: pointer;
+      }
+      button:hover {
+        background: rgb(104, 103, 103);
+        color: #fff;
+      }
+      .move-to-cart {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 45px;
+        right: 50px;
+        left: 185px;
+        /* right: 200px; */
+        animation: animate 2s forwards;
+        /* animation-timing-function: cubic-bezier(0.6, 0.58, 0.73, 0.71); */
+      }
+      @keyframes animate {
+        0% {
+          transform: translate(0px, 0px);
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          transform: translate(calc(100vw - 250px), 0px);
+          /* right: 50px; */
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo-main">
+        <img src="./images/ninja.png" alt="" />
+      </div>
+      <div class="ninja-cart">
+        <img src="./images/basket.png" alt="" />
+      </div>
+    </div>
+    <div class="item-collection"></div>
+
+    <!-- item clicked -->
+    <!-- <div class="move-to-cart" id="moving-to-cart"></div> -->
+  </body>
+</html>
+
+<script src="./cartScript.js"></script>
