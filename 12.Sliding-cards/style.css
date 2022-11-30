@@ -1,0 +1,80 @@
+body {
+  background: black;
+}
+.container {
+  width: 200px;
+  height: 200px;
+  background: wheat;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 0;
+}
+.item {
+  width: 100%;
+  height: 100%;
+  border: 1px solid red;
+  padding: 0;
+  animation: animate 10s infinite;
+  /* animation-direction: alternate; */
+  animation-direction: forwards;
+}
+@keyframes animate {
+  /* 0% {
+    transform: translateX(0);
+  }
+  10% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-200px);
+  }
+  30% {
+    transform: translateX(-200px);
+  }
+  40% {
+    transform: translateX(-400px);
+  }
+  50% {
+    transform: translateX(-400px);
+  }
+  60% {
+    transform: translateX(-600px);
+  }
+  70% {
+    transform: translateX(-600px);
+  } */
+  /* 80% {
+    transform: translateX(0px);
+  } */
+  /* 100% {
+    transform: translateX(0px);
+  } */
+
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(0);
+  }
+  30% {
+    transform: translateX(-200px);
+  }
+  60% {
+    transform: translateX(-200px);
+  }
+  65% {
+    transform: translateX(-400px);
+  }
+  85% {
+    transform: translateX(-400px);
+  }
+  90% {
+    transform: translateX(-600px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
