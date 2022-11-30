@@ -19,7 +19,7 @@ body {
   padding: 0;
   animation: animate 10s infinite;
   /* animation-direction: alternate; */
-  animation-direction: forwards;
+  /* animation-direction: forwards; */
 }
 @keyframes animate {
   /* 0% {
