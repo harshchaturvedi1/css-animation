@@ -6,16 +6,19 @@ const array = [
     "harsh",
     "chaturvedi",
     "ola",
-    'campus'
+    'campus',
+    "jabalpur"
 
 ]
 
 const HomePage = () => {
     const [currentIndex, setCurrentIndex] = useState(0)
     const handleCurrentIndex = (value) => {
-        if (value === 1) {
+        console.log('value:', value)
+
+        if (value === "next") {
             currentIndex === array.length - 1 ? setCurrentIndex(0) : setCurrentIndex(currentIndex + 1)
-        } else if (value === -1) {
+        } else if (value === "prev") {
             currentIndex === 0 ? setCurrentIndex(array.length - 1) : setCurrentIndex(currentIndex - 1)
         } else {
             setCurrentIndex(value)
@@ -23,6 +26,10 @@ const HomePage = () => {
     }
 
     useEffect(() => {
+        console.log("currentIndex", currentIndex)
+        let card = document.getElementById("card_" + currentIndex)
+        card?.scrollIntoView({ behavior: "smooth", block: "end", inline: "center" });
+        // card.scrollIntoView()
     }, [currentIndex]);
 
     useEffect(() => {
@@ -34,7 +41,7 @@ const HomePage = () => {
             {
 
                 array.map((e, i) => (
-                    <div className={styles.eachitem} >
+                    <div id={`card_${i}`} className={styles.eachitem} >
                         {e}
                     </div>
                 ))
@@ -47,14 +54,14 @@ const HomePage = () => {
         <div className={styles.dotsWrapper}>
             {
                 array.map((e, i) => (
-                    <div className={styles.dots} onClick={() => handleCurrentIndex(i)}></div>
+                    <div className={` ${styles.dots} ${i === currentIndex && styles.greyDot}`} onClick={() => handleCurrentIndex(i)}></div>
                 ))
 
             }
         </div>
         <div className={styles.nextAndPrev}>
-            <div onClick={() => handleCurrentIndex(-1)}>prev</div>
-            <div onClick={() => handleCurrentIndex(1)}>next</div>
+            <div onClick={() => handleCurrentIndex("prev")}>prev</div>
+            <div onClick={() => handleCurrentIndex("next")}>next</div>
         </div>
     </div>
 }

@@ -39,8 +39,12 @@ margin-right: 16px;
     width: 10px;
     height: 10px;
     border: 1px solid black;
-    border-radius: 50%;
+    border-radius: 20px;
     cursor: pointer;
+}
+.greyDot{
+    background-color: grey;
+    width: 20px;
 }
 .nextAndPrev{
     width: fit-content;
