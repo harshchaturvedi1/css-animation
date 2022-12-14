@@ -1,0 +1,55 @@
+
+.container{
+    width: 100vw;
+    height: 98vh;
+    background-color: green;
+    margin: -8px;
+}
+.mainWrapper{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    overflow-x: hidden;
+    flex-wrap: nowrap;
+    gap: 5%;
+    padding: 5px;
+}
+
+.eachitem{
+    flex-shrink: 0;
+    width: 85%;
+    height: 200px;
+    border: 1px solid blue;
+    border-radius: 20px;
+}
+
+.mainWrapper > div:nth-child(1){
+margin-left: 16px;
+}
+.mainWrapper > div:nth-last-child(1){
+margin-right: 16px;
+}
+.dotsWrapper{
+    margin: 0 auto;
+    width: fit-content;
+    display: flex;
+    gap: 5px;
+}
+.dots{
+    width: 10px;
+    height: 10px;
+    border: 1px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.nextAndPrev{
+    width: fit-content;
+    display: flex;
+    gap: 20px;
+    margin: 20px auto;
+}
+.nextAndPrev > div{
+    border: 1px solid;
+    padding :5px 10px;
+    cursor: pointer;
+}

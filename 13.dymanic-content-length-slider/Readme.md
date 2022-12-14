@@ -1,0 +1,6 @@
+- put all in an array
+- loop and give all as width equals to available width of screen
+- on click of any button make current index as equal to that of button
+- - based on index move the margin-left as (i x available width of screen) 
+- on click of side arrows increase and decrease the index number
+- if index changes for the particular class put the margin-left
